@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>🎉 فعاليات وكالة ذيب</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      background: linear-gradient(to bottom, #2e1c10, #4d331f);
+      color: #fff9f0;
+      font-family: 'Tajawal', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #8B4513;
+      padding: 25px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 900;
+      color: #FFD700;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    .lang-switch {
+      position: absolute;
+      left: 20px;
+      top: 25px;
+      background: #FFD700;
+      color: #4d331f;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+    .event {
+      background: #3b2618;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px #000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .event:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px #FFD70088;
+    }
+    .event img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .event a {
+      display: block;
+      padding: 18px;
+      text-align: center;
+      background: #FFD700;
+      color: #4d331f;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 20px;
+      border-top: 3px solid #b8860b;
+    }
+    .event a:hover {
+      background: #e6c200;
+    }
+    footer {
+      background: #1a0e06;
+      color: #d2b48c;
+      text-align: center;
+      padding: 20px;
+      font-size: 15px;
+      border-top: 2px solid #3b2618;
+    }
+  
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .event {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .event:nth-of-type(1) { animation-delay: 0.2s; }
+    .event:nth-of-type(2) { animation-delay: 0.4s; }
+    .event:nth-of-type(3) { animation-delay: 0.6s; }
+    .event:nth-of-type(4) { animation-delay: 0.8s; }
+    .event:nth-of-type(5) { animation-delay: 1s; }
+</style>
+</head>
+<body>
+<div id="countdownBar" style="background: #FFD700; color: #4d331f; text-align: center; font-weight: bold; font-size: 18px; padding: 10px 0;">
+  ⏳ العد التنازلي لانطلاق المواجهة: <span id="countdown"></span>
+</div>
+<audio autoplay="" id="bgMusic" loop="" muted="">
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c4d03c2cd0.mp3?filename=happy-chill-background-11254.mp3" type="audio/mpeg"/>
+</audio>
+<header>
+  🌟 فعاليات وكالة ذيب
+  <a class="lang-switch" href="index-en.html">English</a>
+</header>
+<div class="container">
+<div class="event">
+<img alt="بطولة الوكالة" src="theeb-championship-banner.png"/>
+<a href="https://a7medras.github.io/firecup-theeb/" target="_blank">🔥 دخول بطولة الوكالة – لايڤ أون فاير</a>
+<div style="text-align: center; background: #3b2618; padding: 10px;">
+<button onclick="shareEvent('🔥 دخول بطولة الوكالة – لايڤ أون فاير', 'https://a7medras.github.io/firecup-theeb/')" style="background: #25D366; color: white; padding: 8px 16px; border-radius: 20px; border: none; font-weight: bold; margin: 5px; cursor: pointer;">📤 مشاركة</button>
+</div>
+</div>
+<div class="event">
+<img alt="يوم المفاجأة" src="surprise-day-banner.png"/>
+<a href="https://a7medras.github.io/theeb-lucky-star/" target="_blank">🎁 اكتشف فعالية يوم المفاجأة</a>
+<div style="text-align: center; background: #3b2618; padding: 10px;">
+<button onclick="shareEvent('🎁 اكتشف فعالية يوم المفاجأة', 'https://a7medras.github.io/theeb-lucky-star/')" style="background: #25D366; color: white; padding: 8px 16px; border-radius: 20px; border: none; font-weight: bold; margin: 5px; cursor: pointer;">📤 مشاركة</button>
+</div>
+</div>
+<div class="event">
+<img alt="المذيع السري" src="mystery-host-banner.png"/>
+<a href="mystery-host.html">🎭 المذيع السري – التفاصيل</a>
+<div style="text-align: center; background: #3b2618; padding: 10px;">
+<button onclick="shareEvent('🎭 المذيع السري – التفاصيل', 'mystery-host.html')" style="background: #25D366; color: white; padding: 8px 16px; border-radius: 20px; border: none; font-weight: bold; margin: 5px; cursor: pointer;">📤 مشاركة</button>
+</div>
+</div>
+<div class="event">
+<img alt="احتفال الأرقام" src="https://via.placeholder.com/800x400/444/fff?text=احتفال+الأرقام"/>
+<a href="top-numbers.html">🔢 احتفال الأرقام – التفاصيل</a>
+<div style="text-align: center; background: #3b2618; padding: 10px;">
+<button onclick="shareEvent('🔢 احتفال الأرقام – التفاصيل', 'top-numbers.html')" style="background: #25D366; color: white; padding: 8px 16px; border-radius: 20px; border: none; font-weight: bold; margin: 5px; cursor: pointer;">📤 مشاركة</button>
+</div>
+</div>
+<div class="event">
+<img alt="Coming Soon" src="https://via.placeholder.com/800x400/444/fff?text=الفعاليات+القادمة"/>
+<a href="coming-soon.html">📅 الفعاليات القادمة – اكتشف ما هو قادم!</a>
+<div style="text-align: center; background: #3b2618; padding: 10px;">
+<button onclick="shareEvent('📅 الفعاليات القادمة – اكتشف ما هو قادم!', 'coming-soon.html')" style="background: #25D366; color: white; padding: 8px 16px; border-radius: 20px; border: none; font-weight: bold; margin: 5px; cursor: pointer;">📤 مشاركة</button>
+</div>
+</div>
+<div class="event">
+<img alt="افتح الكنز" src="https://via.placeholder.com/800x400/222/fff?text=فعالية+افتح+الكنز"/>
+<a href="#">🔐 فعالية افتح الكنز – قريبًا</a>
+</div>
+<div class="event">
+<img alt="من هو النجم؟" src="https://via.placeholder.com/800x400/333/fff?text=من+هو+النجم؟"/>
+<a href="#">🌟 من هو النجم؟ – فعالية التخمين التفاعلية</a>
+</div>
+</div>
+<footer>
+  جميع الحقوق محفوظة © وكالة ذيب 2025
+</footer>
+<script>
+  window.addEventListener('load', function() {
+    setTimeout(() => {
+      alert("🎉 انطلقت فعاليات وكالة ذيب! استعد للمفاجآت 💥");
+    }, 800);
+  });
+</script>
+<button id="musicToggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: #FFD700; color: #4d331f; border: none; padding: 10px 20px; border-radius: 30px; font-weight: bold; cursor: pointer;">
+  🎵 إيقاف الموسيقى
+</button>
+<script>
+  const bgMusic = document.getElementById('bgMusic');
+  const toggleBtn = document.getElementById('musicToggle');
+  let isPlaying = false;
+
+  window.addEventListener('load', () => {
+    bgMusic.muted = false;
+    bgMusic.volume = 0.4;
+    bgMusic.play();
+    isPlaying = true;
+  });
+
+  toggleBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      bgMusic.pause();
+      toggleBtn.textContent = '🎵 تشغيل الموسيقى';
+    } else {
+      bgMusic.play();
+      toggleBtn.textContent = '🎵 إيقاف الموسيقى';
+    }
+    isPlaying = !isPlaying;
+  });
+</script><script>
+function shareEvent(title, url) {
+  const encoded = encodeURIComponent(title + ' ' + url);
+  const whatsappUrl = `https://wa.me/?text=${encoded}`;
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${encoded}`;
+  window.open(whatsappUrl, '_blank');
+  setTimeout(() => window.open(twitterUrl, '_blank'), 300);
+}
+</script>
+<button id="themeToggle" style="position: fixed; bottom: 70px; right: 20px; z-index: 9999; background: #ccc; color: #222; border: none; padding: 10px 20px; border-radius: 30px; font-weight: bold; cursor: pointer;">
+  🌓 تبديل الوضع
+</button>
+<script>
+  const themeBtn = document.getElementById('themeToggle');
+  let darkMode = true;
+  themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    darkMode = !darkMode;
+    themeBtn.textContent = darkMode ? "🌓 تبديل الوضع" : "🌞 الوضع الليلي";
+  });
+</script>
+<style>
+  .light-mode {
+    background: #fffdf7 !important;
+    color: #333 !important;
+  }
+  .light-mode .event {
+    background: #f2e9dc !important;
+    color: #222 !important;
+  }
+  .light-mode header {
+    background: #eee !important;
+    color: #333 !important;
+  }
+  .light-mode footer {
+    background: #ddd !important;
+    color: #555 !important;
+  }
+</style>
+<script>
+  const eventDate = new Date("2025-07-01T20:00:00+03:00").getTime();
+  const countdownSpan = document.getElementById("countdown");
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = eventDate - now;
+    if (diff <= 0) {
+      countdownSpan.innerText = "بدأت الآن! 🚀";
+      return;
+    }
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    countdownSpan.innerText = `${days}ي ${hours}س ${minutes}د ${seconds}ث`;
+  }, 1000);
+</script>
+</body>
+</html>
